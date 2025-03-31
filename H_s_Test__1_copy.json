@@ -1,1 +1,64 @@
-json
+{
+"name": "H's Test '1 copy",
+"nodes": [
+  {
+"parameters": {},
+"name": "Start",
+"type": "n8n-nodes-base.start",
+"typeVersion": 1,
+"position": [
+240,
+300
+   ]
+  },
+  {
+"parameters": {},
+"name": "Merge",
+"type": "n8n-nodes-base.merge",
+"typeVersion": 1,
+"position": [
+460,
+300
+   ]
+  },
+  {
+"parameters": {
+"options": {}
+   },
+"name": "Git",
+"type": "n8n-nodes-base.git",
+"typeVersion": 1,
+"position": [
+680,
+300
+   ]
+  }
+ ],
+"connections": {
+"Start": {
+"main": [
+    [
+     {
+"node": "Merge",
+"type": "main",
+"index": 0
+     }
+    ]
+   ]
+  },
+"Merge": {
+"main": [
+    [
+     {
+"node": "Git",
+"type": "main",
+"index": 0
+     }
+    ]
+   ]
+  }
+ },
+"active": false,
+"settings": {},
+"id": 20
+}
